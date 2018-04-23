@@ -6,5 +6,7 @@ typedef struct{
     int idSerie;
 }eUsuario;
 
+void CrearListadoUsuariosYSeries(eUsuarioSerie misRelaciones[]);
+
 
 #endif // USUARIOSERIE_H_INCLUDED
