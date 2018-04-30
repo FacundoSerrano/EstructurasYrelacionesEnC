@@ -4,9 +4,11 @@
 typedef struct{
     int idUsuario;
     int idSerie;
-}eUsuario;
+}eUsuarioSerie;
 
-void CrearListadoUsuariosYSeries(eUsuarioSerie misRelaciones[]);
+void CrearListadoUsuariosYSeries(eUsuarioSerie misRelaciones[], int cantidad);
 
 
 #endif // USUARIOSERIE_H_INCLUDED
+
+

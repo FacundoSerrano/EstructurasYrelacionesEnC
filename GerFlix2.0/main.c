@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "serie.h"
+#include "usuario.h"
+#include "usuarioSerie.h"
+
 /**
 *
     1. mostrar cada usuario con las series que ve
@@ -12,89 +17,63 @@
 *
 */
 
-int opcion;
-
 int main()
 {
+    int opcion;
+
+    eSerie series[5]; // declaro mi array de series "vacio"
+    CrearListadoSeries(series, 5); // relleno el array de series
+
+    eUsuario usuarios[3];
+    CrearListadoDeUsuarios(usuarios, 3);
+
+
+    eUsuarioSerie usuarioserie[X];
+    CrearListadoUsuariosYSeries(usuarioserie, X);
+
     do
     {
-        printf("1. Mostrar usuario y las series que ve\n");
-        printf("2. Mostrar usuarios\n");
-        printf("3. Mostrar cantidad de usuarios");
-        printf("4. Salir");
-        scanf("%d", &opcion);
+        printf("Ingrese una opción\n");
+        printf("1. Mostrar usuarios y que ve\n");
+        printf("2. Mostrar que usuarios ven cada serie\n");
+        printf("3. Mostrar cuantos usuarios ven cada serie\n");
+        printf("4. Mostrar la/s series/s menos popular/es\n");
+        printf("5. Ingresar usuario y listar sus series\n");
+        printf("6. Ingresar serie y listar usuarios\n");
+        printf("7. Mostrar top 3 series\n");
+        printf("8. Salir\n");
+        scanf("%d",&opcion);
 
-        switch
+        switch (opcion)
         {
-        case 1:
+            case 1:
+
+                break;
+
+            case 2:
+                break;
+
+            case 3:
+                break;
+
+            case 4:
+                break;
+
+            case 5:
+                break;
+
+            case 6:
+                break;
+
+            case 7:
+                break;
 
 
         }
     }
-    while (opcion != 4);
+    while (opcion != 8);
 
-    printf("Facundo Serrano\n");
-    return 0;
 }
 
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include "serie.h"
-#include "usuario.h"
-#include "usuarioSerie.h"
-#define TAMANIO 5
 
 
-*
-    1. los datos de la serie que ve cada usuario
-    2. por cada serie todos los usuarios que la ven
-    3. por cada serie cuantos usuarios la ven
-*
-
-
-void mostarLosUsuariosConSusSeries( eSerie [],int,  eUsuario [],int,eUsuarioSerie [],int);
-
-int main()
-{
-    eSerie listadoSeries[5];
-    eUsuario listadoUsuarios[3];
-    eUsuarioSerie listadoDeVistas[10];
-
-    CrearListadoDeTresUsuarios(listadoUsuarios);
-    CrearListadoSeries(listadoSeries);
-    CrearListadoUsuariosYSeries(listadoDeVistas);
-
-    mostarLosUsuariosConSusSeries(listadoSeries,5,listadoUsuarios,3,listadoDeVistas,10);
-
-
-    printf("Hello world!\n");
-    return 0;
-}
-void mostarLosUsuariosConSusSeries( eSerie listSerie[],int cantSer , eUsuario listUsuario[],int cantUsu,eUsuarioSerie listRelaciones[],int cantRe){
-
-    int i;
-    for(i=0;i<cantRe;i++)
-    {
-        int j;
-        for(j=0;j<cantUsu;j++)
-        {
-            if(listRelaciones[i].idUsuario== listUsuario[j].idUsuario )
-            {
-                printf("\nusuario: %s",listUsuario[j].nombre);
-                break;
-            }
-        }
-         for(j=0;j<cantSer;j++)
-        {
-            if(listRelaciones[i].idSerie== listSerie[j].idSerie )
-            {
-                printf("serie: %s",listSerie[j].nombre);
-                break;
-            }
-        }
-
-
-    }
-}
-*/
